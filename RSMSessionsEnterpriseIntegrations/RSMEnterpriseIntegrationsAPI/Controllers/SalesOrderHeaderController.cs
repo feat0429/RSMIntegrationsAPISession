@@ -17,8 +17,8 @@
             _service = service;
         }
 
-        [HttpGet("GetAll/{page:int}/{pageSize:int}")]
-        public async Task<IActionResult> Get(int page, int pageSize)
+        [HttpGet("GetAll")]
+        public async Task<IActionResult> Get([FromQuery] int page, int pageSize)
         {
             return Ok(await _service.GetPaginatedSalesOrderHeaders(page, pageSize));
         }

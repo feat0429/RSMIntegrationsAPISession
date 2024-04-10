@@ -17,9 +17,10 @@
 
         public async Task<int> CreateDepartment(Department department)
         {
-            await _context.AddAsync(department);
+            _context.Add(department);
+            await _context.SaveChangesAsync();
 
-            return await _context.SaveChangesAsync();
+            return department.DepartmentId;
         }
 
         public async Task<int> DeleteDepartment(Department department)
@@ -40,7 +41,7 @@
         {
             return await _context.Departments
                 .AsNoTracking()
-                .FirstOrDefaultAsync(d=>d.DepartmentId == id);
+                .FirstOrDefaultAsync(d => d.DepartmentId == id);
         }
 
         public async Task<int> UpdateDepartment(Department department)

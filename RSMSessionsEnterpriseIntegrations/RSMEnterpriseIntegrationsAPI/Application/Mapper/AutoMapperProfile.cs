@@ -1,6 +1,7 @@
 ﻿namespace RSMEnterpriseIntegrationsAPI.Application.Mappers
 {
     using AutoMapper;
+    using RSMEnterpriseIntegrationsAPI.Application.DTOs.Department;
     using RSMEnterpriseIntegrationsAPI.Application.DTOs.PagedList;
     using RSMEnterpriseIntegrationsAPI.Application.DTOs.Product;
     using RSMEnterpriseIntegrationsAPI.Application.DTOs.ProductCategory;
@@ -28,6 +29,12 @@
             CreateMap<ProductCategory, GetProductCategoryDto>().ReverseMap();
             CreateMap<CreateProductCategoryDto, ProductCategory>().ReverseMap();
             CreateMap<UpdateProductCategoryDto, ProductCategory>().ReverseMap();
+            #endregion
+
+            #region Department
+            CreateMap<Department, GetDepartmentDto>().ReverseMap();
+            CreateMap<CreateDepartmentDto, Department>().ReverseMap();
+            CreateMap<UpdateDepartmentDto, Department>().ReverseMap();
             #endregion
         }
     }

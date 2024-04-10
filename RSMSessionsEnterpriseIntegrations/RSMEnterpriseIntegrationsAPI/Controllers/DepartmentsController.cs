@@ -32,19 +32,25 @@
         [HttpDelete("Delete/{id:int}")]
         public async Task<IActionResult> Delete(int id)
         {
-            return Ok(await _service.DeleteDepartment(id));
+            await _service.DeleteDepartment(id);
+
+            return NoContent();
         }
 
         [HttpPost("Create")]
         public async Task<IActionResult> Create(CreateDepartmentDto dto)
         {
-            return Ok(await _service.CreateDepartment(dto));
+            int id = await _service.CreateDepartment(dto);
+
+            return CreatedAtAction(nameof(Get), new { id }, new { departmentId = id });
         }
 
         [HttpPut("Update")]
         public async Task<IActionResult> Update(UpdateDepartmentDto dto)
         {
-            return Ok(await _service.UpdateDepartment(dto));
+            await _service.UpdateDepartment(dto);
+
+            return NoContent();
         }
     }
 }
