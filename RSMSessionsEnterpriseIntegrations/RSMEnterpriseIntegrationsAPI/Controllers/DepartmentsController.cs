@@ -1,10 +1,11 @@
 ﻿namespace RSMEnterpriseIntegrationsAPI.Controllers
 {
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
+    using RSMEnterpriseIntegrationsAPI.Application.DTOs.Department;
+    using RSMEnterpriseIntegrationsAPI.Domain.Interfaces.Department;
 
-    using RSMEnterpriseIntegrationsAPI.Application.DTOs;
-    using RSMEnterpriseIntegrationsAPI.Domain.Interfaces;
-
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class DepartmentsController : ControllerBase
@@ -22,8 +23,8 @@
             return Ok(await _service.GetAll());
         }
 
-        [HttpGet("Get")]        
-        public async Task<IActionResult> Get([FromQuery]int id)
+        [HttpGet("Get")]
+        public async Task<IActionResult> Get([FromQuery] int id)
         {
             return Ok(await _service.GetDepartmentById(id));
         }

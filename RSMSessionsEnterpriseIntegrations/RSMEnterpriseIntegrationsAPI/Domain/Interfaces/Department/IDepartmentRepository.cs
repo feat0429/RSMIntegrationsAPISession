@@ -1,4 +1,4 @@
-﻿namespace RSMEnterpriseIntegrationsAPI.Domain.Interfaces
+﻿namespace RSMEnterpriseIntegrationsAPI.Domain.Interfaces.Department
 {
     using RSMEnterpriseIntegrationsAPI.Domain.Models;
 

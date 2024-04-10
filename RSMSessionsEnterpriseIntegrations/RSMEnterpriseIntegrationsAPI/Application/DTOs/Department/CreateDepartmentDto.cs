@@ -1,4 +1,4 @@
-﻿namespace RSMEnterpriseIntegrationsAPI.Application.DTOs
+﻿namespace RSMEnterpriseIntegrationsAPI.Application.DTOs.Department
 {
     public class CreateDepartmentDto
     {

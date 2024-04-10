@@ -1,8 +1,8 @@
 ﻿namespace RSMEnterpriseIntegrationsAPI.Application.Services
 {
-    using RSMEnterpriseIntegrationsAPI.Application.DTOs;
+    using RSMEnterpriseIntegrationsAPI.Application.DTOs.Department;
     using RSMEnterpriseIntegrationsAPI.Application.Exceptions;
-    using RSMEnterpriseIntegrationsAPI.Domain.Interfaces;
+    using RSMEnterpriseIntegrationsAPI.Domain.Interfaces.Department;
     using RSMEnterpriseIntegrationsAPI.Domain.Models;
 
     using System.Collections.Generic;
